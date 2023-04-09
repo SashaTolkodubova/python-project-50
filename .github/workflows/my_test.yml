@@ -1,9 +1,9 @@
 
 name: "my_test"
 
-on:
-  push:
-
-
+on: [push]
 jobs:
-  run: poetry run pytest -vv
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: poetry run pytest -vv
