@@ -8,12 +8,3 @@
         shell: bash
       - run: poetry run flake8 gendiff
         shell: bash
-      - name: Test & publish code coverage
-        uses: paambaati/codeclimate-action@v3.2.0
-        if: github.ref_name == 'main'
-
-        with:
-          coverageCommand: make test-coverage
-          debug: true
-          secrets:
-            CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
