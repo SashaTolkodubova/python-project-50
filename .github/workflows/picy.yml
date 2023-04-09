@@ -1,3 +1,0 @@
-  name: my_test
-  on: [push]
-  jobs:
