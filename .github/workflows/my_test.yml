@@ -15,6 +15,10 @@ jobs:
         run: |
           pip install poetry
           make install
+      - name: Testing
+        run: |
+          poetry run pytest -vv
+          poetry run flake8 gendiff
       - name: Test & publish code coverage
         uses: paambaati/codeclimate-action@v3.2.0
         if: github.ref_name == 'main'
@@ -23,4 +27,3 @@ jobs:
         with:
           coverageCommand: make test-coverage
           debug: true
-      - uses: ./.github/actions
