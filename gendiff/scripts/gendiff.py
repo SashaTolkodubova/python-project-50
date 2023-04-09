@@ -18,6 +18,7 @@ def main():
     path_to_file2 = args.second_file
     generate_diff(path_to_file1, path_to_file2)
 
+
 def generate_diff(file_path1, file_path2):
 
     with open(file_path1, 'r') as file1_json:
@@ -35,14 +36,14 @@ def generate_diff(file_path1, file_path2):
             if file1[key] == file2[key]:
                 result += f"\n    {key}: {file1[key]}"
             else:
-                 result += f"\n  - {key}: {file1[key]}"
-                 result += f"\n  + {key}: {file2[key]}"
+                result += f"\n  - {key}: {file1[key]}"
+                result += f"\n  + {key}: {file2[key]}"
         elif key in file1:
             result += f"\n  - {key}: {file1[key]}"
         elif key in file2:
             result += f"\n  + {key}: {file2[key]}"
     result += "\n}"
-    return  result
+    return result
 
 
 if __name__ == '__main__':
