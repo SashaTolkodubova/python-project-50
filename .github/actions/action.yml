@@ -6,3 +6,5 @@
     steps:
       - run: poetry run pytest -vv
         shell: bash
+      - run: poetry run flake8 gendiff
+        shell: bash
