@@ -34,5 +34,5 @@ jobs:
         env:
           CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}
         with:
-          coverageCommand: coverage run -m gendiff
+          coverageCommand: coverage run -m pytest gendiff
           debug: true  
