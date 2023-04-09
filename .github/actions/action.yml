@@ -1,0 +1,8 @@
+  name: "my_action"
+
+  description: "my action"
+  runs:
+    using: "composite"
+    steps:
+      - run: poetry run pytest -vv
+        shell: bash

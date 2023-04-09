@@ -6,4 +6,4 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: poetry run pytest -vv
+      - uses: actions/action
