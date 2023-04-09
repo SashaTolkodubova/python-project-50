@@ -16,4 +16,4 @@
           coverageCommand: make test-coverage
           debug: true
           secrets:
-          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+            CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
