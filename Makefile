@@ -1,8 +1,10 @@
 install:
 	poetry install
+build:
+	poetry build
 
 run:
-	poetry run gendiff
+	poetry run gendiff ${file1_path} ${file2_path}
 
 lint:
 	poetry run flake8 gendiff

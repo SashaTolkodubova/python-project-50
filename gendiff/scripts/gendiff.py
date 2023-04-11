@@ -1,5 +1,6 @@
 import argparse
 import json
+from gendiff.scripts.Parsing import parsing
 
 
 def main():
@@ -21,11 +22,11 @@ def main():
 
 def generate_diff(file_path1, file_path2):
 
-    with open(file_path1, 'r') as file1_json:
-        file1 = json.load(file1_json)
-    with open(file_path2, 'r') as file2_json:
-        file2 = json.load(file2_json)
-
+    # with open(file_path1, 'r') as file1_json:
+    #     file1 = json.load(file1_json)
+    # with open(file_path2, 'r') as file2_json:
+    #     file2 = json.load(file2_json)
+    file1, file2 = parsing(file_path1, file_path2)
     keys1 = list(file1.keys())
     keys2 = list(file2.keys())
     keys = list(set(keys1 + keys2))
@@ -43,6 +44,7 @@ def generate_diff(file_path1, file_path2):
         elif key in file2:
             result += f"\n  + {key}: {file2[key]}"
     result += "\n}"
+    print(result)
     return result
 
 
