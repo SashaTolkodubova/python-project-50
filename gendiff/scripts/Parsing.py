@@ -13,7 +13,7 @@ def parsing(file_path1, file_path2):
             file2 = json.load(file2_json)
         return file1, file2
     elif file1_extension == '.yml' and file2_extension == '.yml' \
-         or file1_extension == '.yaml' and file2_extension == '.yaml':
+            or file1_extension == '.yaml' and file2_extension == '.yaml':
         with open(file_path1, 'r') as file1_yml:
             file1 = yaml.safe_load(file1_yml)
         with open(file_path2, 'r') as file2_yml:

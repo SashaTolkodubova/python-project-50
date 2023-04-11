@@ -1,5 +1,4 @@
 import argparse
-import json
 from gendiff.scripts.Parsing import parsing
 
 
