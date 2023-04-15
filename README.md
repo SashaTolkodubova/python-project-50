@@ -5,3 +5,4 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/4ef5273e106f43da12d8/test_coverage)](https://codeclimate.com/github/SashaTolkodubova/python-project-50/test_coverage)
 
 https://asciinema.org/a/LWFDvlWpFurRAgHGI4ZrGrPLN
+https://asciinema.org/a/gy5UoDjlwh9VOeVX0pUA3vi37
