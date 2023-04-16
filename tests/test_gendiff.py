@@ -1,6 +1,6 @@
 from gendiff.scripts.gendiff import diff
 from tests.fixtures.gendiff_unswer import unswer
-from gendiff.scripts.stylish import stylish
+from gendiff.formatters.stylish import stylish
 from gendiff.scripts.Parsing import parsing
 
 
