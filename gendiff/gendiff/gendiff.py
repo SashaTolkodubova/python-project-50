@@ -3,7 +3,7 @@ from gendiff.scripts.Parsing import parsing
 from gendiff.formatters.stylish import stylish
 from gendiff.formatters.plain import plain
 from gendiff.formatters.to_json import to_json
-
+import json
 
 def main():
     parser = argparse.ArgumentParser(
@@ -32,7 +32,9 @@ def generate_diff(file1, file2, formatter="stylish"):
     result = ''
     match formatter:
         case "stylish":
-            result = stylish(diff(file1, file2))
+            y = json.dumps(diff(file1, file2))
+            x = json.loads(y)
+            result = stylish(x)
         case "plain":
             result = plain(diff(file1, file2))
         case 'json':
