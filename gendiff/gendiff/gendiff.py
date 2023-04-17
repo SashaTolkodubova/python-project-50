@@ -28,6 +28,7 @@ def main():
 
 
 def generate_diff(file1, file2, formatter="stylish"):
+    file1, file2 = parsing(file1, file2)
     result = ''
     match formatter:
         case "stylish":
@@ -41,21 +42,6 @@ def generate_diff(file1, file2, formatter="stylish"):
 
 
 def diff(diff_file1, diff_file2):
-    def item_only_in_one(inner_key, inner_value, tag=' '):
-        inner_result = dict()
-        if type(inner_value) is dict:
-            inner_result["tag"] = tag
-            inner_result["key"] = inner_key
-            inner_result['value'] = []
-            for inner_key, inner_value in inner_value.items():
-                inner_result['value'].append(item_only_in_one(inner_key,
-                                                              inner_value))
-        else:
-            inner_result["tag"] = tag
-            inner_result["key"] = inner_key
-            inner_result['value'] = inner_value
-        return inner_result
-
     result = []
     for key, value in diff_file1.items():
         if key in diff_file2:
@@ -81,6 +67,22 @@ def diff(diff_file1, diff_file2):
         else:
             result.append(item_only_in_one(key, value, '+'))
     return result
+
+
+def item_only_in_one(inner_key, inner_value, tag=' '):
+    inner_result = dict()
+    if type(inner_value) is dict:
+        inner_result["tag"] = tag
+        inner_result["key"] = inner_key
+        inner_result['value'] = []
+        for inner_key, inner_value in inner_value.items():
+            inner_result['value'].append(item_only_in_one(inner_key,
+                                                          inner_value))
+    else:
+        inner_result["tag"] = tag
+        inner_result["key"] = inner_key
+        inner_result['value'] = inner_value
+    return inner_result
 
 
 if __name__ == '__main__':
