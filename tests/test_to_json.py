@@ -1,5 +1,5 @@
 from gendiff.formatters.to_json import to_json
-from gendiff.gendiff_p.gendiff import diff
+from gendiff.gendiff.gendiff import diff
 from gendiff.scripts.Parsing import parsing
 import json
 

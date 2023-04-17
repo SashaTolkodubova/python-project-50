@@ -1,7 +1,7 @@
 from gendiff.formatters.plain import plain
-from gendiff.gendiff_p.gendiff import diff
+from gendiff.gendiff.gendiff import diff
 from gendiff.scripts.Parsing import parsing
-from fixtures.plain_unswer import unswer
+from tests.fixtures.plain_unswer import unswer
 
 
 def test_plain():

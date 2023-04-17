@@ -1,4 +1,4 @@
-from gendiff.gendiff_p.gendiff import diff
+from gendiff.gendiff.gendiff import diff
 from tests.fixtures.gendiff_unswer import unswer
 from gendiff.formatters.stylish import stylish
 from gendiff.scripts.Parsing import parsing
