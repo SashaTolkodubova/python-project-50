@@ -5,6 +5,7 @@ from gendiff.formatters.plain import plain
 from gendiff.formatters.to_json import to_json
 
 
+
 def main():
     parser = argparse.ArgumentParser(
         'Compares two configuration files and shows a difference.')

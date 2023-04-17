@@ -1,5 +1,5 @@
 from gendiff.formatters.plain import plain
-from gendiff.scripts.gendiff import diff
+from gendiff.gendiff_p.gendiff import diff
 from gendiff.scripts.Parsing import parsing
 from fixtures.plain_unswer import unswer
 
