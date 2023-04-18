@@ -5,6 +5,7 @@ from gendiff.formatters.plain import plain
 from gendiff.formatters.to_json import to_json
 import json
 
+
 def main():
     parser = argparse.ArgumentParser(
         'Compares two configuration files and shows a difference.')
@@ -20,11 +21,11 @@ def main():
     path_to_file1 = args.first_file
     path_to_file2 = args.second_file
     formatter = args.format
-    file1, file2 = parsing(path_to_file1, path_to_file2)
+    # file1, file2 = parsing(path_to_file1, path_to_file2)
     if formatter:
-        generate_diff(file1, file2, formatter)
+        generate_diff(path_to_file1, path_to_file2, formatter)
     else:
-        generate_diff(file1, file2)
+        generate_diff(path_to_file1, path_to_file2)
 
 
 def generate_diff(file1, file2, formatter="stylish"):
@@ -32,9 +33,10 @@ def generate_diff(file1, file2, formatter="stylish"):
     result = ''
     match formatter:
         case "stylish":
-            y = json.dumps(diff(file1, file2))
-            x = json.loads(y)
-            result = stylish(x)
+            # y = json.dumps(diff(file1, file2))
+            # x = json.loads(y)
+            # result = stylish(x)
+            result = stylish(diff(file1, file2))
         case "plain":
             result = plain(diff(file1, file2))
         case 'json':
