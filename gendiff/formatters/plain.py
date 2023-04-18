@@ -64,7 +64,7 @@ def is_updated(doc_upd):
 def is_value_complex(i):
     if type(i) is list:
         return '[complex value]'
-    elif i == 'false' or i == 'true' or i == 'null':
+    elif i == 'false' or i == 'true' or i == 'null' or type(i) == int:
         return i
     else:
         return f"'{i}'"
