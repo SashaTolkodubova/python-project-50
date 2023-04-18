@@ -27,7 +27,7 @@ def stylish(doc, level=0):
                               f"{i['tag']} {i['key']}:"
                 else:
                     result += f"\n{'    ' * returner_level}  " \
-                              f"{i['tag']} {i['key']}: {i['value']}"
+                              f"{i['tag']} {i['key']}:", " {i['value']}"
         result += f"\n{'    ' * returner_level}{'}'}"
         return result
     return returner(doc, level)
