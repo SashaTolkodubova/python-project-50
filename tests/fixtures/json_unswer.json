@@ -16,12 +16,12 @@
       {
         "tag": "-",
         "key": "setting3",
-        "value": true
+        "value": "true"
       },
       {
         "tag": "+",
         "key": "setting3",
-        "value": null
+        "value": "null"
       },
       {
         "tag": " ",
@@ -58,7 +58,7 @@
       {
         "tag": "+",
         "key": "follow",
-        "value": false
+        "value": "false"
       },
       {
         "tag": "+",
