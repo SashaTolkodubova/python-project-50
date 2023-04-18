@@ -45,6 +45,18 @@ def generate_diff(file1, file2, formatter="stylish"):
     return result
 
 
+def py_to_json_style_formatter(value):
+    match value:
+        case True:
+            return 'true'
+        case False:
+            return 'false'
+        case None:
+            return 'null'
+        case _:
+            return value
+
+
 def diff(diff_file1, diff_file2):
     result = []
     for key, value in diff_file1.items():
@@ -85,8 +97,10 @@ def item_only_in_one(inner_key, inner_value, tag=' '):
     else:
         inner_result["tag"] = tag
         inner_result["key"] = inner_key
-        inner_result['value'] = inner_value
+        inner_result['value'] = py_to_json_style_formatter(inner_value)
     return inner_result
+
+
 
 
 if __name__ == '__main__':
