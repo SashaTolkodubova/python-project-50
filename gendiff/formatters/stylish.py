@@ -8,9 +8,16 @@ def stylish(doc, level=0):
                       f"{i['tag']} {i['key']} ", end='')
                 stylish(i['value'], inner_level + 1)
             else:
-                print(f"\n{'    ' * inner_level}  {i['tag']} ",
-                      f"{i['key']}:", f" {i['value']}", end='')
+                print(f"\n{'    ' * inner_level}  {i['tag']} "
+                      f"{i['key']}: {i['value']}", end='')
         print(f"\n{'    ' * inner_level}{'}'}", end='')
+
+    def is_value(value):
+        if value:
+            return f" {value}"
+        else:
+            return ""
+
 
     def returner(returner_doc, returner_level):
         returner_doc = sorted(returner_doc, key=lambda x: x['key'])
@@ -26,8 +33,8 @@ def stylish(doc, level=0):
                     result += f"\n{'    ' * returner_level}  " \
                               f"{i['tag']} {i['key']}:"
                 else:
-                    result += f"\n{'    ' * returner_level} " \
-                              f"{i['tag']} {i['key']}:" + f" {i['value']}"
+                    result += f"\n{'    ' * returner_level}  " \
+                              f"{i['tag']} {i['key']}:{is_value(i['value'])}"
         result += f"\n{'    ' * returner_level}{'}'}"
         return result
     return returner(doc, level)
