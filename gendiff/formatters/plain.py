@@ -80,5 +80,3 @@ def take_path(sentence):
         if flag:
             word += char
     return word
-
-
