@@ -40,7 +40,7 @@ def plain(doc):
     inner(doc)
     result = sorted(result, key=take_path)
     result = make_string(result)
-    result += '\n'
+    result = result[:-1]
     return result
 
 
@@ -80,4 +80,5 @@ def take_path(sentence):
         if flag:
             word += char
     return word
+
 
