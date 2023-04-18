@@ -3,7 +3,6 @@ from gendiff.scripts.Parsing import parsing
 from gendiff.formatters.stylish import stylish
 from gendiff.formatters.plain import plain
 from gendiff.formatters.to_json import to_json
-import json
 
 
 def main():
@@ -99,8 +98,6 @@ def item_only_in_one(inner_key, inner_value, tag=' '):
         inner_result["key"] = inner_key
         inner_result['value'] = py_to_json_style_formatter(inner_value)
     return inner_result
-
-
 
 
 if __name__ == '__main__':

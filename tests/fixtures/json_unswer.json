@@ -1,1 +1,168 @@
-[{"tag": " ", "key": "common", "value": [{"tag": " ", "key": "setting1", "value": "Value 1"}, {"tag": "-", "key": "setting2", "value": 200}, {"tag": "-", "key": "setting3", "value": true}, {"tag": "+", "key": "setting3", "value": null}, {"tag": " ", "key": "setting6", "value": [{"tag": " ", "key": "key", "value": "value"}, {"tag": " ", "key": "doge", "value": [{"tag": "-", "key": "wow", "value": ""}, {"tag": "+", "key": "wow", "value": "so much"}]}, {"tag": "+", "key": "ops", "value": "vops"}]}, {"tag": "+", "key": "follow", "value": false}, {"tag": "+", "key": "setting4", "value": "blah blah"}, {"tag": "+", "key": "setting5", "value": [{"tag": " ", "key": "key5", "value": "value5"}]}]}, {"tag": " ", "key": "group1", "value": [{"tag": "-", "key": "baz", "value": "bas"}, {"tag": "+", "key": "baz", "value": "bars"}, {"tag": " ", "key": "foo", "value": "bar"}, {"tag": "-", "key": "nest", "value": [{"tag": " ", "key": "key", "value": "value"}]}, {"tag": "+", "key": "nest", "value": "str"}]}, {"tag": "-", "key": "group2", "value": [{"tag": " ", "key": "abc", "value": 12345}, {"tag": " ", "key": "deep", "value": [{"tag": " ", "key": "id", "value": 45}]}]}, {"tag": "+", "key": "group3", "value": [{"tag": " ", "key": "deep", "value": [{"tag": " ", "key": "id", "value": [{"tag": " ", "key": "number", "value": 45}]}]}, {"tag": " ", "key": "fee", "value": 100500}]}]
+[
+  {
+    "tag": " ",
+    "key": "common",
+    "value": [
+      {
+        "tag": " ",
+        "key": "setting1",
+        "value": "Value 1"
+      },
+      {
+        "tag": "-",
+        "key": "setting2",
+        "value": 200
+      },
+      {
+        "tag": "-",
+        "key": "setting3",
+        "value": true
+      },
+      {
+        "tag": "+",
+        "key": "setting3",
+        "value": null
+      },
+      {
+        "tag": " ",
+        "key": "setting6",
+        "value": [
+          {
+            "tag": " ",
+            "key": "key",
+            "value": "value"
+          },
+          {
+            "tag": " ",
+            "key": "doge",
+            "value": [
+              {
+                "tag": "-",
+                "key": "wow",
+                "value": ""
+              },
+              {
+                "tag": "+",
+                "key": "wow",
+                "value": "so much"
+              }
+            ]
+          },
+          {
+            "tag": "+",
+            "key": "ops",
+            "value": "vops"
+          }
+        ]
+      },
+      {
+        "tag": "+",
+        "key": "follow",
+        "value": false
+      },
+      {
+        "tag": "+",
+        "key": "setting4",
+        "value": "blah blah"
+      },
+      {
+        "tag": "+",
+        "key": "setting5",
+        "value": [
+          {
+            "tag": " ",
+            "key": "key5",
+            "value": "value5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": " ",
+    "key": "group1",
+    "value": [
+      {
+        "tag": "-",
+        "key": "baz",
+        "value": "bas"
+      },
+      {
+        "tag": "+",
+        "key": "baz",
+        "value": "bars"
+      },
+      {
+        "tag": " ",
+        "key": "foo",
+        "value": "bar"
+      },
+      {
+        "tag": "-",
+        "key": "nest",
+        "value": [
+          {
+            "tag": " ",
+            "key": "key",
+            "value": "value"
+          }
+        ]
+      },
+      {
+        "tag": "+",
+        "key": "nest",
+        "value": "str"
+      }
+    ]
+  },
+  {
+    "tag": "-",
+    "key": "group2",
+    "value": [
+      {
+        "tag": " ",
+        "key": "abc",
+        "value": 12345
+      },
+      {
+        "tag": " ",
+        "key": "deep",
+        "value": [
+          {
+            "tag": " ",
+            "key": "id",
+            "value": 45
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "+",
+    "key": "group3",
+    "value": [
+      {
+        "tag": " ",
+        "key": "deep",
+        "value": [
+          {
+            "tag": " ",
+            "key": "id",
+            "value": [
+              {
+                "tag": " ",
+                "key": "number",
+                "value": 45
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": " ",
+        "key": "fee",
+        "value": 100500
+      }
+    ]
+  }
+]
