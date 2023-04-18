@@ -9,7 +9,7 @@ def stylish(doc, level=0):
                 stylish(i['value'], inner_level + 1)
             else:
                 print(f"\n{'    ' * inner_level}  {i['tag']} "
-                      f"{i['key']}: {i['value']}", end='')
+                      f"{i['key']}:", f" {i['value']}", end='')
         print(f"\n{'    ' * inner_level}{'}'}", end='')
 
     def returner(returner_doc, returner_level):
