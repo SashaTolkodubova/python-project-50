@@ -52,6 +52,8 @@ def py_to_json_style_formatter(value):
             return 'false'
         case None:
             return 'null'
+        case "":
+            return " "
         case _:
             return value
 
