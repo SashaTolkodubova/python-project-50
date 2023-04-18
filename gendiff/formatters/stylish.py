@@ -15,9 +15,6 @@ def stylish(doc, level=0):
     def is_value(value):
         if value:
             return f" {value}"
-        # else:
-        #     return ""
-
 
     def returner(returner_doc, returner_level):
         returner_doc = sorted(returner_doc, key=lambda x: x['key'])
