@@ -53,7 +53,7 @@ def py_to_json_style_formatter(value):
         case None:
             return 'null'
         case "":
-            return " "
+            return ""
         case _:
             return value
 
@@ -104,3 +104,4 @@ def item_only_in_one(inner_key, inner_value, tag=' '):
 
 if __name__ == '__main__':
     main()
+
