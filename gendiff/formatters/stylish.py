@@ -8,7 +8,7 @@ def stylish(doc, level=0):
                       f"{i['tag']} {i['key']} ", end='')
                 stylish(i['value'], inner_level + 1)
             else:
-                print(f"\n{'    ' * inner_level}  {i['tag']} "
+                print(f"\n{'    ' * inner_level}  {i['tag']} ",
                       f"{i['key']}:", f" {i['value']}", end='')
         print(f"\n{'    ' * inner_level}{'}'}", end='')
 
@@ -26,8 +26,8 @@ def stylish(doc, level=0):
                     result += f"\n{'    ' * returner_level}  " \
                               f"{i['tag']} {i['key']}:"
                 else:
-                    result += f"\n{'    ' * returner_level}  " \
-                              f"{i['tag']} {i['key']}:", " {i['value']}"
+                    result += f"\n{'    ' * returner_level} " \
+                              f"{i['tag']} {i['key']}:" + f" {i['value']}"
         result += f"\n{'    ' * returner_level}{'}'}"
         return result
     return returner(doc, level)
