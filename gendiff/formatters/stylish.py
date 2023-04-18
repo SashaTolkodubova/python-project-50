@@ -13,7 +13,7 @@ def stylish(doc, level=0):
         print(f"\n{'    ' * inner_level}{'}'}", end='')
 
     def is_value(value):
-        if value:
+        if value or value == 0:
             return f" {value}"
         return None
 
