@@ -14,7 +14,7 @@ def stylish(doc, level=0):
 
     def is_value(value):
         if value or value == 0:
-            return f" {value}"
+            return f"xxx {value}"
         return ''
 
     def returner(returner_doc, returner_level):
